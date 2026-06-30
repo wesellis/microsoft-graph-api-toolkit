@@ -17,6 +17,9 @@ on:
       - 'tests/**/*.ps1'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   validate-powershell:
     name: PowerShell and Graph API Validation
