@@ -4,8 +4,13 @@
 [![Graph API](https://img.shields.io/badge/Graph_API-v1.0-00BCF2?style=flat-square&logo=microsoft&logoColor=white)](https://graph.microsoft.com)
 [![M365](https://img.shields.io/badge/M365-All_Services-FF6900?style=flat-square&logo=microsoft-office&logoColor=white)](https://www.microsoft.com/microsoft-365)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/wesellis/TECH-Microsoft-Graph-API-Explorer-PowerShell-M365-Management?style=flat-square)](https://github.com/wesellis/TECH-Microsoft-Graph-API-Explorer-PowerShell-M365-Management/stargazers)
-[![Last Commit](https://img.shields.io/github/last-commit/wesellis/TECH-Microsoft-Graph-API-Explorer-PowerShell-M365-Management?style=flat-square)](https://github.com/wesellis/TECH-Microsoft-Graph-API-Explorer-PowerShell-M365-Management/commits)
+[![Stars](https://img.shields.io/github/stars/wesellis/microsoft-graph-api-toolkit?style=flat-square)](https://github.com/wesellis/microsoft-graph-api-toolkit/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/wesellis/microsoft-graph-api-toolkit?style=flat-square)](https://github.com/wesellis/microsoft-graph-api-toolkit/commits)
+
+```bash
+git clone https://github.com/wesellis/microsoft-graph-api-toolkit.git
+cd microsoft-graph-api-toolkit
+```
 
 ## Overview
 
@@ -216,106 +221,3 @@ MIT License - See LICENSE file for details.
 ---
 
 **Note**: These scripts require appropriate Microsoft Graph API permissions. Always test in a non-production environment first and follow your organization's change management procedures.
-
----
-
-## Project Status & Roadmap
-
-**[100% Complete]** ✅ - Production-ready enterprise toolkit with 45 functional scripts (4,800+ lines)
-
-### What's Implemented ✅
-
-#### User Management (5 scripts - 700+ lines)
-- ✅ **get-user-info.ps1**: Comprehensive user details with licenses, groups, sign-in activity, manager info
-- ✅ **list-users.ps1**: Filter and export user lists by department, status, type
-- ✅ **create-user.ps1**: Create users with auto-generated secure passwords and full validation
-- ✅ **update-user.ps1**: Bulk update properties (department, title, location, phones)
-- ✅ **delete-user.ps1**: Safe user deletion with ShouldProcess confirmation
-
-#### Group Management (6 scripts - 350+ lines)
-- ✅ **create-group.ps1**: Create Security or Microsoft 365 groups with full options
-- ✅ **list-groups.ps1**: List/filter groups by type (Security, M365, Distribution)
-- ✅ **get-group-members.ps1**: Export detailed group membership with user details
-- ✅ **add-user-to-group.ps1**: Add users to groups with validation
-- ✅ **remove-user-from-group.ps1**: Remove members safely
-- ✅ **delete-group.ps1**: Delete groups with safety confirmations
-
-#### Teams Management (5 scripts - 500+ lines)
-- ✅ **Get-TeamsReport.ps1**: Teams usage report with member/channel counts
-- ✅ **New-GraphTeam.ps1**: Create teams with owners, members, and custom settings
-- ✅ **Set-TeamArchiveStatus.ps1**: Archive/unarchive teams with read-only options
-- ✅ **Get-InactiveTeams.ps1**: Find inactive teams for cleanup and governance
-- ✅ **New-TeamChannel.ps1**: Create standard or private channels with member management
-
-#### Email & Calendar (4 scripts - 500+ lines)
-- ✅ **Search-GraphMail.ps1**: Search emails by subject, sender, date range
-- ✅ **Get-GraphCalendarEvents.ps1**: Export calendar events for backup/reporting
-- ✅ **Set-MailboxDelegation.ps1**: Configure mailbox delegation permissions
-- ✅ **Get-MailboxSizeReport.ps1**: Mailbox storage utilization analysis
-
-#### Security Reports (4 scripts - 550+ lines)
-- ✅ **Get-MFAStatusReport.ps1**: MFA enrollment status across all users
-- ✅ **Get-ConditionalAccessReport.ps1**: Conditional Access policy audit
-- ✅ **Get-SignInRiskReport.ps1**: Risky sign-in detection and analysis
-- ✅ **Get-SecurityScoreReport.ps1**: Microsoft Secure Score with improvement actions
-
-#### General Reports (5 scripts - 450+ lines)
-- ✅ **Get-LicenseReport.ps1**: License usage, costs, utilization analysis
-- ✅ **Get-GuestUserReport.ps1**: External user audit with sign-in activity
-- ✅ **Get-InactiveUsers.ps1**: Find unused accounts for license reclamation
-- ✅ **Get-GroupMembershipReport.ps1**: Comprehensive group membership analysis
-- ✅ **Get-MailboxSizeReport.ps1**: Mailbox storage metrics
-
-#### SharePoint & OneDrive (5 scripts - 650+ lines)
-- ✅ **Get-SharePointSiteReport.ps1**: Site usage, storage, owners, permissions
-- ✅ **Get-OneDriveUsageReport.ps1**: OneDrive storage analysis per user
-- ✅ **Set-SharePointPermissions.ps1**: Manage site and library permissions
-- ✅ **New-SharePointSiteFromTemplate.ps1**: Create sites from templates
-- ✅ **Get-SharePointExternalSharing.ps1**: Audit external sharing and guest access
-
-#### Advanced Automation (5 scripts - 800+ lines)
-- ✅ **Update-UserProperties.ps1**: Bulk update users from CSV files
-- ✅ **Process-JoinersLeavers.ps1**: Automated onboarding/offboarding workflows
-- ✅ **Sync-ADAttributesToGraph.ps1**: Sync on-premises AD to Azure AD
-- ✅ **New-ScheduledGraphTask.ps1**: Create scheduled tasks for automation
-- ✅ **Invoke-ApprovalWorkflow.ps1**: Approval workflows for Graph operations
-
-#### Compliance & eDiscovery (3 scripts - 450+ lines)
-- ✅ **New-eDiscoveryCase.ps1**: Create and manage eDiscovery cases
-- ✅ **Get-RetentionPolicyReport.ps1**: Retention policies and labels audit
-- ✅ **Get-DLPPolicyReport.ps1**: Data Loss Prevention policies and incidents
-
-#### Utilities (3 scripts - 200+ lines)
-- ✅ **Test-GraphPermissions.ps1**: Validate API permissions before running scripts
-- ✅ **Invoke-GraphBatch.ps1**: Batch processing with throttling and retry logic
-- ✅ **Convert-GraphData.ps1**: Export to CSV, HTML, JSON, GridView
-- ✅ **Connect-GraphExplorer.ps1**: Simplified connection with common scopes
-
-### Production Quality Features
-- ✅ **Comment-based help** (.SYNOPSIS, .DESCRIPTION, .EXAMPLE, .NOTES)
-- ✅ **Parameter validation** (Mandatory, ValidateSet, ValidatePattern, ValidateScript)
-- ✅ **Error handling** (try/catch blocks, connection checks, detailed error messages)
-- ✅ **Pipeline support** (ValueFromPipeline, proper begin/process/end blocks)
-- ✅ **Color-coded output** (Green=success, Yellow=warning, Red=error, Cyan=info)
-- ✅ **Export options** (CSV, HTML, JSON on all reporting scripts)
-- ✅ **Safety features** (WhatIf, ShouldProcess for destructive operations)
-- ✅ **Progress bars** (for long-running batch operations)
-- ✅ **Approval workflows** (for sensitive operations)
-- ✅ **Scheduled automation** (Windows Task Scheduler integration)
-- ✅ **Hybrid AD sync** (on-premises to cloud synchronization)
-
-### Complete M365 Coverage
-This toolkit provides **complete administrative coverage** of Microsoft 365 services:
-- ✅ **Azure AD**: Users, Groups, Authentication
-- ✅ **Microsoft Teams**: Teams, Channels, Members, Archiving
-- ✅ **Exchange Online**: Mail, Calendar, Delegation, Storage
-- ✅ **SharePoint**: Sites, Permissions, Templates, External Sharing
-- ✅ **OneDrive**: Storage, Usage, Reporting
-- ✅ **Security**: MFA, Conditional Access, Sign-in Risk, Secure Score
-- ✅ **Compliance**: eDiscovery, Retention Policies, DLP
-- ✅ **Automation**: Workflows, Approvals, Scheduled Tasks, AD Sync
-
-### Current Status
-**🎉 COMPLETE - Production-ready for enterprise IT administrators!**
-
-All 45 scripts follow PowerShell best practices with comprehensive error handling, extensive parameter validation, and real-world enterprise use cases. Full automation support including scheduled tasks, approval workflows, and hybrid AD synchronization. Complete compliance coverage with eDiscovery, retention policies, and DLP reporting.
